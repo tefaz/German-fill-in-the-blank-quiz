@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "sentence": "Ich habe ___ Hund.",
+    "translation": "I have a dog.",
+    "level": "A1",
+    "grammarTag": "accusative-article",
+    "options": [
+      { "word": "einen", "correct": true, "explanation": "Hund is masculine and the direct object of \"haben\", so it takes the accusative: einen." },
+      { "word": "ein", "correct": false, "explanation": "\"ein\" is the nominative masculine form. The direct object needs the accusative." },
+      { "word": "einem", "correct": false, "explanation": "\"einem\" is dative. \"haben\" takes an accusative object, not a dative one." },
+      { "word": "eine", "correct": false, "explanation": "\"eine\" is feminine. Hund is masculine (der Hund)." }
+    ]
+  },
+  {
+    "id": 2,
+    "sentence": "Wir fahren morgen ___ Berlin.",
+    "translation": "We are going to Berlin tomorrow.",
+    "level": "A1",
+    "grammarTag": "prepositions-cities",
+    "options": [
+      { "word": "nach", "correct": true, "explanation": "Use \"nach\" for travelling to cities and most countries without an article." },
+      { "word": "in", "correct": false, "explanation": "\"in\" describes being inside a place, or motion into an enclosed space with an article. Not used for going to a city." },
+      { "word": "zu", "correct": false, "explanation": "\"zu\" is used for going to people or specific places (zum Arzt, zur Schule), not cities." },
+      { "word": "an", "correct": false, "explanation": "\"an\" means at/on/next to something, e.g. am Meer. It does not express travelling to a city." }
+    ]
+  },
+  {
+    "id": 3,
+    "sentence": "Meine Schwester ___ jeden Morgen Kaffee.",
+    "translation": "My sister drinks coffee every morning.",
+    "level": "A1",
+    "grammarTag": "verb-conjugation",
+    "options": [
+      { "word": "trinkt", "correct": true, "explanation": "Third person singular (sie/er/es) takes -t: sie trinkt." },
+      { "word": "trinke", "correct": false, "explanation": "\"trinke\" is the ich form." },
+      { "word": "trinken", "correct": false, "explanation": "\"trinken\" is for wir/sie (plural). \"Meine Schwester\" is singular." },
+      { "word": "trinkst", "correct": false, "explanation": "\"trinkst\" is the du form." }
+    ]
+  },
+  {
+    "id": 4,
+    "sentence": "Ich ___ gestern ins Kino gegangen.",
+    "translation": "I went to the cinema yesterday.",
+    "level": "A2",
+    "grammarTag": "perfect-auxiliary",
+    "options": [
+      { "word": "bin", "correct": true, "explanation": "\"gehen\" is a verb of movement, so the perfect tense uses \"sein\": ich bin gegangen." },
+      { "word": "habe", "correct": false, "explanation": "Most verbs use \"haben\" in the perfect, but verbs of movement like gehen use \"sein\"." },
+      { "word": "wurde", "correct": false, "explanation": "\"wurde\" is used for the passive or as past of \"werden\", not the perfect of \"gehen\"." },
+      { "word": "werde", "correct": false, "explanation": "\"werde\" is present/future of \"werden\" and does not form the perfect." }
+    ]
+  },
+  {
+    "id": 5,
+    "sentence": "Das ist ___ Bruder.",
+    "translation": "That is my brother.",
+    "level": "A1",
+    "grammarTag": "possessive-articles",
+    "options": [
+      { "word": "mein", "correct": true, "explanation": "\"Bruder\" is masculine nominative after \"ist\", so the possessive takes no ending: mein." },
+      { "word": "meine", "correct": false, "explanation": "\"meine\" is feminine (or plural) nominative." },
+      { "word": "meinen", "correct": false, "explanation": "\"meinen\" is masculine accusative. After \"sein\" the noun stays nominative." },
+      { "word": "meinem", "correct": false, "explanation": "\"meinem\" is masculine dative, which doesn't fit here." }
+    ]
+  }
+]

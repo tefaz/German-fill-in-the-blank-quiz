@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A German fill-in-the-blank game for English speakers." />
+    <title>German in the Stars</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="starfield" aria-hidden="true"></canvas>
+    <main class="game-shell">
+      <section class="game-card" aria-labelledby="sentence" aria-describedby="status">
+        <p class="eyebrow" id="level-label">German practice</p>
+        <h1 id="sentence" class="sentence" lang="de"></h1>
+        <p class="round-hint">Choose the word that completes the sentence.</p>
+        <div id="options" class="options" role="group" aria-label="Answer options"></div>
+        <div id="status" class="status" aria-live="polite" aria-atomic="true"></div>
+        <button id="continue" class="continue" type="button" hidden>Continue <span aria-hidden="true">↵</span></button>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
