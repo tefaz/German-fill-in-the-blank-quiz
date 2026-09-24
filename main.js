@@ -2,10 +2,9 @@ import { pulse, softDim } from './starfield.js';
 
 const elements = {
   sentence: document.querySelector('#sentence'),
-  level: document.querySelector('#level-label'),
   options: document.querySelector('#options'),
   status: document.querySelector('#status'),
-  continue: document.querySelector('#continue')
+  translation: document.querySelector('#translation')
 };
 
 let current = null;
@@ -49,20 +48,24 @@ let quiz;
 
 function sentenceMarkup(sentence, chosenWord = '', result = '') {
   const [before, after] = sentence.split('___');
+  const slotWidth = current
+    ? Math.max(3, ...current.options.map(option => [...option.word].length)) + 1
+    : 3;
+  const slotStyle = `style="--slot-width: ${slotWidth}ch"`;
   const blank = chosenWord
-    ? `<span class="answer-word ${result}">${chosenWord}</span>`
-    : '<span class="blank" aria-label="blank">&nbsp;&nbsp;&nbsp;</span>';
+    ? `<span class="answer-word ${result}" ${slotStyle}>${chosenWord}</span>`
+    : `<span class="blank" aria-label="blank" ${slotStyle}>&nbsp;</span>`;
   elements.sentence.innerHTML = `${before}${blank}${after}`;
 }
 
 function renderQuestion() {
   current = quiz.next();
   answered = false;
-  elements.level.textContent = `${current.level} · ${current.grammarTag.replaceAll('-', ' ')}`;
   sentenceMarkup(current.sentence);
   elements.options.replaceChildren();
   elements.status.replaceChildren();
-  elements.continue.hidden = true;
+  elements.translation.textContent = '';
+  elements.translation.hidden = true;
 
   shuffle(current.options).forEach((option, index) => {
     const button = document.createElement('button');
@@ -101,15 +104,19 @@ function answer(selected, selectedButton) {
     quiz.requeue(current);
     softDim();
   } else pulse();
-  const translation = document.createElement('p');
-  translation.className = 'translation';
-  translation.textContent = current.translation;
-  elements.status.append(translation);
-  elements.continue.hidden = false;
-  elements.continue.focus();
+  elements.translation.textContent = current.translation;
+  elements.translation.hidden = false;
 }
 
-function continueGame() { if (answered) renderQuestion(); }
+function continueGame() {
+  if (!answered) return;
+  pulse();
+  renderQuestion();
+}
+
+document.addEventListener('click', event => {
+  if (answered && !event.target.closest('#options, #sentence, #translation, #status')) continueGame();
+});
 
 window.addEventListener('keydown', event => {
   if (event.key === 'Enter' || event.key === ' ') {
@@ -120,8 +127,6 @@ window.addEventListener('keydown', event => {
   const button = elements.options.children[index];
   if (!answered && Number.isInteger(index) && button) button.click();
 });
-elements.continue.addEventListener('click', continueGame);
-
 async function start() {
   try {
     const response = await fetch('sentences.json');

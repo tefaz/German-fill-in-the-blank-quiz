@@ -11,12 +11,12 @@
     <canvas id="starfield" aria-hidden="true"></canvas>
     <main class="game-shell">
       <section class="game-card" aria-labelledby="sentence" aria-describedby="status">
-        <p class="eyebrow" id="level-label">German practice</p>
+        <p id="translation" class="translation" lang="en" hidden></p>
         <h1 id="sentence" class="sentence" lang="de"></h1>
-        <p class="round-hint">Choose the word that completes the sentence.</p>
         <div id="options" class="options" role="group" aria-label="Answer options"></div>
-        <div id="status" class="status" aria-live="polite" aria-atomic="true"></div>
-        <button id="continue" class="continue" type="button" hidden>Continue <span aria-hidden="true">↵</span></button>
+        <div class="answer-area">
+          <div id="status" class="status" aria-live="polite" aria-atomic="true"></div>
+        </div>
       </section>
     </main>
     <script type="module" src="main.js"></script>
