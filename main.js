@@ -1,4 +1,4 @@
-import { pulse, softDim } from './starfield.js';
+import { reactToAnswer } from './aquarium.js';
 
 const elements = {
   sentence: document.querySelector('#sentence'),
@@ -102,15 +102,14 @@ function answer(selected, selectedButton) {
     correct.textContent = `Correct answer: ${correctOption.word}. ${correctOption.explanation}`;
     elements.status.append(correct);
     quiz.requeue(current);
-    softDim();
-  } else pulse();
+  }
+  reactToAnswer(isCorrect);
   elements.translation.textContent = current.translation;
   elements.translation.hidden = false;
 }
 
 function continueGame() {
   if (!answered) return;
-  pulse();
   renderQuestion();
 }
 

@@ -1,6 +1,6 @@
-# German in the Stars
+# German in the Glow
 
-A small, static German fill-in-the-blank game for English speakers. Questions are presented against an animated star field, with immediate grammar explanations after each answer.
+A small, static German fill-in-the-blank game for English speakers. Questions are presented against a flowing aquarium of yellow and orange glimmers, with immediate grammar explanations after each answer.
 
 The game is built with plain HTML, CSS, and JavaScript. It has no dependencies, package manager, or build step.
 
@@ -14,14 +14,14 @@ python3 -m http.server
 
 Then open [http://localhost:8000](http://localhost:8000).
 
-Choose an answer with the mouse or by pressing `1`–`5`. After answering, press `Enter` or `Space`, or click outside the answer area, to continue. Incorrect questions return to the queue and appear again later.
+Choose an answer with the mouse or by pressing `1`–`5`. Each answer reveals a translation and explanation and sends a brief wave through the glimmers. Press `Enter` or `Space`, or click empty space, to continue without triggering another wave. Incorrect questions return to the queue and appear again later.
 
 ## Project structure
 
 - `index.html` — page structure and accessibility landmarks
 - `style.css` — responsive visual design and reduced-motion support
-- `main.js` — question loading, validation, shuffling, scoring, and keyboard controls
-- `starfield.js` — animated canvas background and answer feedback effects
+- `main.js` — question loading, validation, shuffling, answer feedback, and keyboard controls
+- `aquarium.js` — animated liquid glimmers and answer feedback effects
 - `sentences.json` — question and explanation content
 
 ## Add questions
