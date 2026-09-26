@@ -1,4 +1,4 @@
-import { reactToAnswer } from './aquarium.js';
+import { reactToAnswer, reactToContinue } from './effects.js';
 
 const elements = {
   sentence: document.querySelector('#sentence'),
@@ -118,14 +118,16 @@ function answer(selected, selectedButton) {
 
 function continueGame() {
   if (!answered) return;
+  reactToContinue();
   renderQuestion();
 }
 
 document.addEventListener('click', event => {
-  if (answered && !event.target.closest('#options, #sentence, #translation, #status')) continueGame();
+  if (answered && !event.target.closest('#options, #sentence, #translation, #status, #effects-toggle')) continueGame();
 });
 
 window.addEventListener('keydown', event => {
+  if (event.target.closest('#effects-toggle')) return;
   if (event.key === 'Enter' || event.key === ' ') {
     if (answered) { event.preventDefault(); continueGame(); }
     return;

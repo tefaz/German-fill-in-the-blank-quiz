@@ -22,12 +22,16 @@ Choose an answer with the mouse or by pressing `1`–`4`. Each answer reveals a 
 
 The top-left counter shows correct answers in the current page session over the number of playable questions. It resets on reload; because questions repeat, the number of correct answers can eventually exceed the question count.
 
+Use the upper-right Aquarium / Starfield toggle to switch visual modes without losing your question or score. Aquarium is the default. Starfield restores the blue background, drifting stars, and pointer parallax from commit `846186a`: correct answers and continuing pulse the stars, while incorrect answers briefly dim them. Both modes respect reduced-motion preferences.
+
 ## Project structure
 
 - `index.html` — page structure and accessibility landmarks
 - `style.css` — responsive visual design and reduced-motion support
 - `main.js` — question loading, validation, shuffling, answer feedback, and keyboard controls
 - `aquarium.js` — animated liquid glimmers and answer feedback effects
+- `starfield.js` — original starfield background and feedback effects
+- `effects.js` — visual mode toggle and routing of quiz effects
 - `sentences.json` — question and explanation content
 
 ## Add questions

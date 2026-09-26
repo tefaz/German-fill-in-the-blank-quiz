@@ -25,6 +25,7 @@ let frame;
 let lastTime = performance.now();
 let reactionStart = -Infinity;
 let dimStart = -Infinity;
+let enabled = true;
 
 function random(min, max) { return min + Math.random() * (max - min); }
 
@@ -244,6 +245,7 @@ function animate(now) {
 
 function syncAnimation() {
   cancelAnimationFrame(frame);
+  if (!enabled) return;
   if (motionPreference.matches || document.hidden) draw(performance.now());
   else {
     lastTime = performance.now();
@@ -259,6 +261,12 @@ export function reactToAnswer(correct) {
 
 // Keep older cached main.js modules loadable; continue no longer triggers an effect.
 export function reactToContinue() {}
+
+export function setEnabled(value) {
+  enabled = value;
+  reactionStart = dimStart = -Infinity;
+  syncAnimation();
+}
 
 makeSprites();
 window.addEventListener('resize', resize);

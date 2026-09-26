@@ -9,6 +9,11 @@
   </head>
   <body>
     <canvas id="aquarium" aria-hidden="true"></canvas>
+    <canvas id="starfield" aria-hidden="true" hidden></canvas>
+    <button id="effects-toggle" class="effects-toggle" type="button" aria-label="Starfield mode" aria-pressed="false" title="Switch to starfield">
+      <span class="effects-toggle-thumb" aria-hidden="true"></span>
+      <span class="effects-toggle-label" aria-hidden="true">Aquarium</span>
+    </button>
     <main class="game-shell">
       <p id="score" class="score" hidden>Correct answers: <span id="correct-count">0</span>/<span id="total-count">0</span></p>
       <section class="game-card" aria-labelledby="sentence" aria-describedby="status">
