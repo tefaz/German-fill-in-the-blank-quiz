@@ -4,11 +4,15 @@ const elements = {
   sentence: document.querySelector('#sentence'),
   options: document.querySelector('#options'),
   status: document.querySelector('#status'),
-  translation: document.querySelector('#translation')
+  translation: document.querySelector('#translation'),
+  score: document.querySelector('#score'),
+  correctCount: document.querySelector('#correct-count'),
+  totalCount: document.querySelector('#total-count')
 };
 
 let current = null;
 let answered = false;
+let correctCount = 0;
 
 function validateSentences(data) {
   if (!Array.isArray(data)) return [];
@@ -85,6 +89,10 @@ function answer(selected, selectedButton) {
   answered = true;
   const correctOption = current.options.find(option => option.correct);
   const isCorrect = selected.correct;
+  if (isCorrect) {
+    correctCount += 1;
+    elements.correctCount.textContent = correctCount;
+  }
   sentenceMarkup(current.sentence, selected.word, isCorrect ? 'correct' : 'wrong');
 
   [...elements.options.children].forEach(button => {
@@ -132,6 +140,8 @@ async function start() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const sentences = validateSentences(await response.json());
     if (!sentences.length) throw new Error('No valid sentences found.');
+    elements.totalCount.textContent = sentences.length;
+    elements.score.hidden = false;
     quiz = new QuizQueue(sentences);
     renderQuestion();
   } catch (error) {

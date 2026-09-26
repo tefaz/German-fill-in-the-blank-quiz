@@ -16,6 +16,8 @@ Then open [http://localhost:8000](http://localhost:8000).
 
 Choose an answer with the mouse or by pressing `1`–`5`. Each answer reveals a translation and explanation and sends a brief wave through the glimmers. Press `Enter` or `Space`, or click empty space, to continue without triggering another wave. Incorrect questions return to the queue and appear again later.
 
+The top-left counter shows correct answers in the current page session over the number of playable questions. It resets on reload; because questions repeat, the number of correct answers can eventually exceed the question count.
+
 ## Project structure
 
 - `index.html` — page structure and accessibility landmarks
@@ -41,7 +43,7 @@ Add objects to `sentences.json` using this shape:
 }
 ```
 
-Every question must contain exactly one `___` placeholder, have 3–5 options, and have exactly one option where `correct` is `true`. Each option also needs a `word` and an `explanation`. Invalid entries are logged in the browser console and skipped.
+Every question must contain exactly one `___` placeholder, have exactly 4 options, and have exactly one option where `correct` is `true`. Each option also needs a `word` and an `explanation`. Invalid entries are logged in the browser console and skipped.
 
 ## License
 

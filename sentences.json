@@ -26,7 +26,7 @@
     "sentence": "Meine Schwester ___ jeden Morgen Kaffee.",
     "translation": "My sister drinks coffee every morning.",
     "options": [
-      { "word": "trinkt", "correct": true, "explanation": "Third person singular (sie/er/es) takes -t: sie trinkt." },
+      { "word": "trinkt", "correct": true, "explanation": "Meine Schwester refers to one person (sie), so trinken becomes trinkt." },
       { "word": "trinke", "correct": false, "explanation": "\"trinke\" is the ich form." },
       { "word": "trinken", "correct": false, "explanation": "\"trinken\" is for wir/sie (plural). \"Meine Schwester\" is singular." },
       { "word": "trinkst", "correct": false, "explanation": "\"trinkst\" is the du form." }
@@ -37,7 +37,7 @@
     "sentence": "Ich ___ gestern ins Kino gegangen.",
     "translation": "I went to the cinema yesterday.",
     "options": [
-      { "word": "bin", "correct": true, "explanation": "\"gehen\" is a verb of movement, so the perfect tense uses \"sein\": ich bin gegangen." },
+      { "word": "bin", "correct": true, "explanation": "The perfect tense of gehen uses sein: ich bin gegangen." },
       { "word": "habe", "correct": false, "explanation": "Most verbs use \"haben\" in the perfect, but verbs of movement like gehen use \"sein\"." },
       { "word": "wurde", "correct": false, "explanation": "\"wurde\" is used for the passive or as past of \"werden\", not the perfect of \"gehen\"." },
       { "word": "werde", "correct": false, "explanation": "\"werde\" is present/future of \"werden\" and does not form the perfect." }
@@ -145,7 +145,7 @@
   {
     "id": 14,
     "sentence": "Ich gehe heute ___ Arzt.",
-    "translation": "I am going to the doctor's today.",
+    "translation": "I'm going to the doctor today.",
     "options": [
       { "word": "zum", "correct": true, "explanation": "Use zu + dem, contracted to zum, when going to the doctor." },
       { "word": "nach", "correct": false, "explanation": "\"nach\" is used for cities, countries without articles, and nach Hause." },
@@ -379,7 +379,7 @@
     "translation": "We do not have a car.",
     "options": [
       { "word": "kein", "correct": true, "explanation": "\"kein\" negates a noun that would take \"ein\". Auto is neuter, so: kein Auto." },
-      { "word": "nicht", "correct": false, "explanation": "\"nicht\" negates verbs and adjectives. A noun with an indefinite article is negated with \"kein\"." },
+      { "word": "nicht", "correct": false, "explanation": "To say you have no car, use kein before Auto; nicht cannot replace it here." },
       { "word": "keine", "correct": false, "explanation": "\"keine\" is feminine or plural, but Auto is neuter." },
       { "word": "keinen", "correct": false, "explanation": "\"keinen\" is masculine accusative, but Auto is neuter." }
     ]
@@ -444,7 +444,7 @@
     "sentence": "Gestern ___ wir im Park spazieren gegangen.",
     "translation": "Yesterday we went for a walk in the park.",
     "options": [
-      { "word": "sind", "correct": true, "explanation": "\"gehen\" is a verb of motion, so its perfect tense uses \"sein\": wir sind gegangen." },
+      { "word": "sind", "correct": true, "explanation": "The perfect tense of gehen uses sein; with wir, that gives wir sind gegangen." },
       { "word": "haben", "correct": false, "explanation": "\"haben\" is not the auxiliary for verbs of motion like \"gehen\"." },
       { "word": "hatten", "correct": false, "explanation": "\"hatten\" is the auxiliary \"haben\", which is wrong for \"gegangen\"." },
       { "word": "werden", "correct": false, "explanation": "\"werden\" forms the future or the passive, not the perfect tense." }
@@ -543,10 +543,10 @@
     "sentence": "Ich warte ___ den Bus.",
     "translation": "I am waiting for the bus.",
     "options": [
-      { "word": "auf", "correct": true, "explanation": "\"warten\" is always used with \"auf\" and the accusative." },
+      { "word": "auf", "correct": true, "explanation": "To wait for someone or something, use warten auf with the accusative: auf den Bus." },
       { "word": "für", "correct": false, "explanation": "English \"wait for\" tempts you to use \"für\", but German uses \"auf\"." },
-      { "word": "an", "correct": false, "explanation": "\"an\" does not go with \"warten\"." },
-      { "word": "bei", "correct": false, "explanation": "\"bei\" does not go with \"warten\"." }
+      { "word": "an", "correct": false, "explanation": "To wait for the bus, German uses warten auf den Bus, not an den Bus." },
+      { "word": "bei", "correct": false, "explanation": "Bei can describe where you wait, but it cannot replace auf to name what you are waiting for." }
     ]
   },
   {
@@ -765,7 +765,7 @@
     "options": [
       { "word": "auf", "correct": true, "explanation": "\"stolz sein auf\" takes the accusative." },
       { "word": "von", "correct": false, "explanation": "English \"proud of\" tempts you to use \"von\", but German uses \"auf\"." },
-      { "word": "für", "correct": false, "explanation": "English \"proud for\" is a false friend; German uses \"auf\"." },
+      { "word": "für", "correct": false, "explanation": "Für means for, but German uses stolz auf to say proud of someone." },
       { "word": "über", "correct": false, "explanation": "\"stolz über\" is not the standard construction." }
     ]
   },
@@ -807,7 +807,7 @@
     "sentence": "Als ich ein Kind ___, wohnten wir auf dem Land.",
     "translation": "When I was a child, we lived in the countryside.",
     "options": [
-      { "word": "war", "correct": true, "explanation": "\"war\" is the simple past of \"sein\" and matches \"wohnten\"." },
+      { "word": "war", "correct": true, "explanation": "War is the simple past form of sein for ich; the sentence describes a real situation in the past." },
       { "word": "bin", "correct": false, "explanation": "\"bin\" is present tense and does not match the past tense of the sentence." },
       { "word": "wäre", "correct": false, "explanation": "\"wäre\" is subjunctive II, but this describes a real past situation." },
       { "word": "wurde", "correct": false, "explanation": "\"wurde\" means \"became\" or forms the passive, which does not fit here." }
@@ -871,7 +871,7 @@
   {
     "id": 80,
     "sentence": "Das Auto, mit ___ er gefahren ist, ist rot.",
-    "translation": "The car he drove is red.",
+    "translation": "The car he traveled in is red.",
     "options": [
       { "word": "dem", "correct": true, "explanation": "\"mit\" takes the dative, and Auto is neuter: mit dem Auto." },
       { "word": "das", "correct": false, "explanation": "\"das\" is neuter nominative or accusative, but \"mit\" takes the dative." },
@@ -926,9 +926,9 @@
   {
     "id": 85,
     "sentence": "Die von der Regierung ___ Maßnahmen treten morgen in Kraft.",
-    "translation": "The measures decided by the government come into force tomorrow.",
+    "translation": "The measures adopted by the government will take effect tomorrow.",
     "options": [
-      { "word": "beschlossenen", "correct": true, "explanation": "The past participle has a passive meaning (\"decided\"), and after \"die\" a plural takes -en." },
+      { "word": "beschlossenen", "correct": true, "explanation": "Beschlossen means adopted here; as an adjective before plural Maßnahmen after die, it takes -en." },
       { "word": "beschließenden", "correct": false, "explanation": "\"beschließenden\" is a present participle with an active meaning (\"deciding\")." },
       { "word": "beschlossene", "correct": false, "explanation": "After the article \"die\" the plural ending must be -en, not -e." },
       { "word": "beschlossenem", "correct": false, "explanation": "\"-em\" is a dative singular ending and does not fit a plural subject." }
@@ -970,7 +970,7 @@
   {
     "id": 89,
     "sentence": "Ich habe die Nase ___.",
-    "translation": "I have had enough. / I am fed up.",
+    "translation": "I'm fed up.",
     "options": [
       { "word": "voll", "correct": true, "explanation": "\"die Nase voll haben\" is a fixed idiom meaning \"to be fed up\"." },
       { "word": "leer", "correct": false, "explanation": "\"die Nase leer haben\" is not an idiom." },
@@ -1068,10 +1068,10 @@
   },
   {
     "id": 98,
-    "sentence": "Wäre es nicht so spät, ___ ich noch geblieben.",
-    "translation": "If it were not so late, I would have stayed longer.",
+    "sentence": "Wäre es gestern nicht so spät gewesen, ___ ich länger geblieben.",
+    "translation": "If it hadn't been so late yesterday, I would have stayed longer.",
     "options": [
-      { "word": "wäre", "correct": true, "explanation": "\"bleiben\" takes \"sein\", so the subjunctive II past is \"wäre geblieben\"." },
+      { "word": "wäre", "correct": true, "explanation": "This unreal past result uses the subjunctive II auxiliary wäre because bleiben forms its perfect with sein." },
       { "word": "hätte", "correct": false, "explanation": "\"bleiben\" takes \"sein\", not \"haben\"." },
       { "word": "würde", "correct": false, "explanation": "\"würde\" is combined with an infinitive, not with a participle." },
       { "word": "wurde", "correct": false, "explanation": "\"wurde\" is indicative simple past and does not form the subjunctive." }
@@ -1126,7 +1126,7 @@
     "sentence": "Es handelt sich ___ ein Missverständnis.",
     "translation": "It is a misunderstanding.",
     "options": [
-      { "word": "um", "correct": true, "explanation": "\"es handelt sich um\" is the fixed expression meaning \"it is about\" or \"it concerns\"." },
+      { "word": "um", "correct": true, "explanation": "Es handelt sich um identifies what something is; here, it means it is a misunderstanding." },
       { "word": "über", "correct": false, "explanation": "\"über\" does not go with \"sich handeln\"." },
       { "word": "von", "correct": false, "explanation": "\"von\" is used with \"handeln von\" without \"sich\", but not in \"es handelt sich\"." },
       { "word": "an", "correct": false, "explanation": "\"an\" does not go with \"sich handeln\"." }
@@ -1135,9 +1135,9 @@
   {
     "id": 104,
     "sentence": "Die Firma hat uns ein attraktives Angebot ___.",
-    "translation": "The company submitted an attractive offer to us.",
+    "translation": "The company made us an attractive offer.",
     "options": [
-      { "word": "unterbreitet", "correct": true, "explanation": "\"ein Angebot unterbreiten\" is the fixed collocation for submitting an offer." },
+      { "word": "unterbreitet", "correct": true, "explanation": "Jemandem ein Angebot unterbreiten means to make someone an offer; hat requires the participle unterbreitet." },
       { "word": "unterbrochen", "correct": false, "explanation": "\"unterbrochen\" means \"interrupted\"." },
       { "word": "unterstützt", "correct": false, "explanation": "\"unterstützt\" means \"supported\" and does not go with \"Angebot\" like this." },
       { "word": "unterschieden", "correct": false, "explanation": "\"unterschieden\" means \"distinguished\"." }
@@ -1201,7 +1201,7 @@
   {
     "id": 110,
     "sentence": "Das steht ___ Frage.",
-    "translation": "That is beyond question.",
+    "translation": "That is beyond doubt.",
     "options": [
       { "word": "außer", "correct": true, "explanation": "\"außer Frage stehen\" is the fixed expression meaning \"to be beyond doubt\"." },
       { "word": "ohne", "correct": false, "explanation": "\"ohne Frage\" exists, but it is not used with \"stehen\"." },
@@ -1225,9 +1225,9 @@
     "sentence": "Die Entscheidung liegt in ___ Ermessen.",
     "translation": "The decision is at his discretion.",
     "options": [
-      { "word": "seinem", "correct": true, "explanation": "\"im Ermessen liegen\" takes the dative, and Ermessen is neuter: in seinem Ermessen." },
+      { "word": "seinem", "correct": true, "explanation": "In seinem Ermessen means at his discretion; in takes dative here, and Ermessen is neuter." },
       { "word": "seinen", "correct": false, "explanation": "\"seinen\" is masculine accusative or plural, but Ermessen is neuter." },
-      { "word": "sein", "correct": false, "explanation": "\"sein\" would be an accusative form, but \"liegen\" needs the dative." },
+      { "word": "sein", "correct": false, "explanation": "Sein lacks the dative ending required after in here; use seinem." },
       { "word": "seiner", "correct": false, "explanation": "\"seiner\" is feminine dative or genitive, but Ermessen is neuter." }
     ]
   },
@@ -1335,7 +1335,7 @@
     "sentence": "Wer A sagt, muss auch B ___.",
     "translation": "If you say A, you must also say B.",
     "options": [
-      { "word": "sagen", "correct": true, "explanation": "This proverb repeats the verb: Wer A sagt, muss auch B sagen." },
+      { "word": "sagen", "correct": true, "explanation": "Wer A sagt, muss auch B sagen is a proverb about following through once you have committed to something." },
       { "word": "machen", "correct": false, "explanation": "The proverb uses \"sagen\", not \"machen\"." },
       { "word": "tun", "correct": false, "explanation": "The proverb uses \"sagen\", not \"tun\"." },
       { "word": "sein", "correct": false, "explanation": "The proverb uses \"sagen\", not \"sein\"." }
@@ -1366,7 +1366,7 @@
   {
     "id": 125,
     "sentence": "Das hätte ich ihm nie ___.",
-    "translation": "I would never have thought him capable of that.",
+    "translation": "I never would have thought he could do that.",
     "options": [
       { "word": "zugetraut", "correct": true, "explanation": "\"jemandem etwas zutrauen\" means to think someone capable of something." },
       { "word": "zugesagt", "correct": false, "explanation": "\"zugesagt\" means \"promised\" or \"appealed to\", which does not fit here." },
@@ -1388,9 +1388,9 @@
   {
     "id": 127,
     "sentence": "Es ___ mir fern, Ihnen Vorwürfe zu machen.",
-    "translation": "It is far from me to reproach you.",
+    "translation": "I have no intention of accusing you.",
     "options": [
-      { "word": "liegt", "correct": true, "explanation": "\"jemandem fernliegen\" is the fixed expression meaning \"to be far from one's mind\"." },
+      { "word": "liegt", "correct": true, "explanation": "Es liegt mir fern means I have no intention of doing it; Ihnen Vorwürfe machen means to accuse or blame you." },
       { "word": "geht", "correct": false, "explanation": "\"es geht mir fern\" is not an expression." },
       { "word": "kommt", "correct": false, "explanation": "\"es kommt mir fern\" is not an expression." },
       { "word": "hängt", "correct": false, "explanation": "\"es hängt mir fern\" is not an expression." }
@@ -1434,7 +1434,7 @@
     "sentence": "Ihm ___ der Kragen.",
     "translation": "He lost his temper.",
     "options": [
-      { "word": "platzte", "correct": true, "explanation": "\"Ihm platzt der Kragen\" is the idiom meaning that someone loses their patience." },
+      { "word": "platzte", "correct": true, "explanation": "Ihm platzte der Kragen is a past-tense idiom meaning he lost his temper." },
       { "word": "zerbrach", "correct": false, "explanation": "\"Ihm zerbrach der Kragen\" is not an idiom." },
       { "word": "fiel", "correct": false, "explanation": "\"Ihm fiel der Kragen\" is not an idiom." },
       { "word": "sprang", "correct": false, "explanation": "\"Ihm sprang der Kragen\" is not an idiom." }
@@ -1454,7 +1454,7 @@
   {
     "id": 133,
     "sentence": "Sie ließ es sich nicht ___, persönlich zu gratulieren.",
-    "translation": "She insisted on congratulating him personally.",
+    "translation": "She made a point of offering congratulations in person.",
     "options": [
       { "word": "nehmen", "correct": true, "explanation": "\"es sich nicht nehmen lassen\" is the fixed phrase meaning \"to insist on doing something\"." },
       { "word": "geben", "correct": false, "explanation": "\"es sich nicht geben lassen\" is not the fixed phrase." },
@@ -1498,12 +1498,507 @@
   {
     "id": 137,
     "sentence": "Diese Entwicklung ___ zu denken.",
-    "translation": "This development gives cause for thought.",
+    "translation": "This development gives us something to think about.",
     "options": [
-      { "word": "gibt", "correct": true, "explanation": "\"zu denken geben\" is the fixed expression meaning \"to give cause for thought\"." },
+      { "word": "gibt", "correct": true, "explanation": "Jemandem zu denken geben means to make someone reflect or feel concerned; Entwicklung is singular, so the verb is gibt." },
       { "word": "macht", "correct": false, "explanation": "\"zu denken machen\" is not the expression." },
       { "word": "tut", "correct": false, "explanation": "\"zu denken tun\" is not the expression." },
       { "word": "lässt", "correct": false, "explanation": "\"zu denken lassen\" is not the expression." }
+    ]
+  },
+  {
+    "id": 138,
+    "sentence": "Die Kinder ___ im Garten.",
+    "translation": "The children are playing in the garden.",
+    "options": [
+      { "word": "spielen", "correct": true, "explanation": "Die Kinder is plural, so the present-tense verb is spielen." },
+      { "word": "spielt", "correct": false, "explanation": "Spielt goes with er, sie, es, or ihr, not die Kinder." },
+      { "word": "spielst", "correct": false, "explanation": "Spielst is the form used with du." },
+      { "word": "spiele", "correct": false, "explanation": "Spiele is the form used with ich." }
+    ]
+  },
+  {
+    "id": 139,
+    "sentence": "Ich kaufe ___ Brot.",
+    "translation": "I am buying a loaf of bread.",
+    "options": [
+      { "word": "ein", "correct": true, "explanation": "Brot is neuter, and the neuter accusative indefinite article is ein." },
+      { "word": "einen", "correct": false, "explanation": "Einen is masculine accusative, but Brot is neuter." },
+      { "word": "eine", "correct": false, "explanation": "Eine is feminine, but Brot is neuter." },
+      { "word": "einem", "correct": false, "explanation": "Einem is dative; kaufen takes an accusative object here." }
+    ]
+  },
+  {
+    "id": 140,
+    "sentence": "Der Zug kommt ___ zehn Uhr.",
+    "translation": "The train arrives at ten o'clock.",
+    "options": [
+      { "word": "um", "correct": true, "explanation": "Use um before a specific clock time." },
+      { "word": "am", "correct": false, "explanation": "Am is used with days or dates, not a clock time." },
+      { "word": "im", "correct": false, "explanation": "Im is used with months or seasons, not a clock time." },
+      { "word": "seit", "correct": false, "explanation": "Seit means since and does not mark the scheduled arrival time." }
+    ]
+  },
+  {
+    "id": 141,
+    "sentence": "Die Tasche gehört ___ Schwester.",
+    "translation": "The bag belongs to my sister.",
+    "options": [
+      { "word": "meiner", "correct": true, "explanation": "Gehören takes the dative; meiner Schwester is feminine dative." },
+      { "word": "meine", "correct": false, "explanation": "Meine is nominative or accusative feminine, not dative." },
+      { "word": "meinen", "correct": false, "explanation": "Meinen does not agree with the feminine dative noun Schwester." },
+      { "word": "meinem", "correct": false, "explanation": "Meinem is masculine or neuter dative; Schwester is feminine." }
+    ]
+  },
+  {
+    "id": 142,
+    "sentence": "Gestern hat er seine Schlüssel ___.",
+    "translation": "He lost his keys yesterday.",
+    "options": [
+      { "word": "verloren", "correct": true, "explanation": "The perfect tense of verlieren uses hat plus the participle verloren." },
+      { "word": "verlieren", "correct": false, "explanation": "Verlieren is the infinitive, not the past participle." },
+      { "word": "verliert", "correct": false, "explanation": "Verliert is a present-tense form, not the past participle." },
+      { "word": "verlor", "correct": false, "explanation": "Verlor is simple past; after hat, use verloren." }
+    ]
+  },
+  {
+    "id": 143,
+    "sentence": "Wir sind letztes Jahr nach Wien ___.",
+    "translation": "We travelled to Vienna last year.",
+    "options": [
+      { "word": "gefahren", "correct": true, "explanation": "For travel to a destination, fahren forms the perfect with sein: wir sind nach Wien gefahren." },
+      { "word": "fuhren", "correct": false, "explanation": "Fuhren is simple past and cannot follow sind here." },
+      { "word": "fahren", "correct": false, "explanation": "Fahren is the infinitive or present plural form, not the participle." },
+      { "word": "fahrt", "correct": false, "explanation": "Fahrt is a present-tense form used with ihr." }
+    ]
+  },
+  {
+    "id": 144,
+    "sentence": "Dieses Hotel ist ___ als das letzte.",
+    "translation": "This hotel is cheaper than the last one.",
+    "options": [
+      { "word": "günstiger", "correct": true, "explanation": "Use the comparative günstiger before als when comparing two hotels." },
+      { "word": "günstig", "correct": false, "explanation": "Günstig is the base form; the comparison with als needs the comparative." },
+      { "word": "günstigste", "correct": false, "explanation": "Günstigste is a superlative form, not the comparative used with als." },
+      { "word": "günstiges", "correct": false, "explanation": "Günstiges is an inflected adjective for a noun, not a comparative predicate." }
+    ]
+  },
+  {
+    "id": 145,
+    "sentence": "Ich musste gestern länger ___.",
+    "translation": "I had to work longer yesterday.",
+    "options": [
+      { "word": "arbeiten", "correct": true, "explanation": "After the modal verb musste, the main verb stays in the infinitive: arbeiten." },
+      { "word": "arbeite", "correct": false, "explanation": "Arbeite is a finite present-tense form, not the infinitive needed after musste." },
+      { "word": "arbeitete", "correct": false, "explanation": "Arbeitete is simple past; the modal verb already carries the tense." },
+      { "word": "gearbeitet", "correct": false, "explanation": "Gearbeitet is a past participle, but musste takes an infinitive here." }
+    ]
+  },
+  {
+    "id": 146,
+    "sentence": "Ich weiß, dass der Zug um acht Uhr ___.",
+    "translation": "I know that the train leaves at eight o'clock.",
+    "options": [
+      { "word": "abfährt", "correct": true, "explanation": "In a dass-clause, the separable verb stays together at the end: abfährt." },
+      { "word": "fährt ab", "correct": false, "explanation": "Fährt ab separates in a main clause, but not at the end of this subordinate clause." },
+      { "word": "abfahren", "correct": false, "explanation": "Abfahren is an infinitive; der Zug needs a finite verb." },
+      { "word": "abfahre", "correct": false, "explanation": "Abfahre is the ich form; der Zug takes abfährt." }
+    ]
+  },
+  {
+    "id": 147,
+    "sentence": "Er versucht, pünktlich ___ kommen.",
+    "translation": "He is trying to arrive on time.",
+    "options": [
+      { "word": "zu", "correct": true, "explanation": "Versuchen is followed by an infinitive with zu: zu kommen." },
+      { "word": "um", "correct": false, "explanation": "Um alone cannot introduce this infinitive; a purpose clause would need um ... zu." },
+      { "word": "an", "correct": false, "explanation": "An does not introduce an infinitive after versuchen." },
+      { "word": "mit", "correct": false, "explanation": "Mit does not introduce an infinitive after versuchen." }
+    ]
+  },
+  {
+    "id": 148,
+    "sentence": "Die Tür wurde gestern ___.",
+    "translation": "The door was repaired yesterday.",
+    "options": [
+      { "word": "repariert", "correct": true, "explanation": "The passive uses wurde plus the past participle repariert." },
+      { "word": "reparieren", "correct": false, "explanation": "Reparieren is the infinitive, not the participle required after wurde." },
+      { "word": "reparierte", "correct": false, "explanation": "Reparierte is a finite past-tense form, not the participle." },
+      { "word": "reparierend", "correct": false, "explanation": "Reparierend is a present participle and does not form this passive." }
+    ]
+  },
+  {
+    "id": 149,
+    "sentence": "Trotz des Regens ___ wir gestern spazieren.",
+    "translation": "Despite the rain, we went for a walk yesterday.",
+    "options": [
+      { "word": "gingen", "correct": true, "explanation": "Gingen is the simple past plural of gehen and agrees with wir." },
+      { "word": "ging", "correct": false, "explanation": "Ging is singular, but the subject is wir." },
+      { "word": "gehen", "correct": false, "explanation": "Gehen is present tense with wir; this completed event is expressed in the past with gingen." },
+      { "word": "gegangen", "correct": false, "explanation": "Gegangen is a participle and needs an auxiliary verb." }
+    ]
+  },
+  {
+    "id": 150,
+    "sentence": "Das ist der Kollege, ___ ich die Unterlagen geschickt habe.",
+    "translation": "That is the colleague to whom I sent the documents.",
+    "options": [
+      { "word": "dem", "correct": true, "explanation": "The recipient of schicken is dative; the masculine dative relative pronoun is dem." },
+      { "word": "den", "correct": false, "explanation": "Den is masculine accusative, but the colleague is the dative recipient." },
+      { "word": "der", "correct": false, "explanation": "Der is masculine nominative; the relative clause needs a dative pronoun." },
+      { "word": "dessen", "correct": false, "explanation": "Dessen is genitive and would express possession, not the recipient." }
+    ]
+  },
+  {
+    "id": 151,
+    "sentence": "An deiner Stelle ___ ich früher losgefahren.",
+    "translation": "If I were you, I would have set off earlier.",
+    "options": [
+      { "word": "wäre", "correct": true, "explanation": "The unreal past of losfahren uses the subjunctive auxiliary wäre with losgefahren." },
+      { "word": "hätte", "correct": false, "explanation": "Losfahren uses sein, not haben, as its perfect auxiliary." },
+      { "word": "würde", "correct": false, "explanation": "Würde cannot stand directly before the past participle losgefahren here." },
+      { "word": "bin", "correct": false, "explanation": "Bin is indicative and does not express this unreal past situation." }
+    ]
+  },
+  {
+    "id": 152,
+    "sentence": "Nachdem Anna die E-Mail gelesen ___, rief sie mich an.",
+    "translation": "After she had read the email, she called me.",
+    "options": [
+      { "word": "hatte", "correct": true, "explanation": "The earlier action uses past perfect: sie hatte gelesen." },
+      { "word": "hatten", "correct": false, "explanation": "Hatten is plural, but Anna is singular." },
+      { "word": "hattest", "correct": false, "explanation": "Hattest is the form used with du, not sie." },
+      { "word": "haben", "correct": false, "explanation": "Haben is a present-tense plural form or infinitive, not the singular past-perfect auxiliary." }
+    ]
+  },
+  {
+    "id": 153,
+    "sentence": "Die im Labor ___ Proben werden morgen untersucht.",
+    "translation": "The samples taken in the laboratory will be examined tomorrow.",
+    "options": [
+      { "word": "entnommenen", "correct": true, "explanation": "After definite plural die, this attributive past participle takes the weak ending -en." },
+      { "word": "entnommene", "correct": false, "explanation": "Entnommene lacks the -n required after the definite plural article die." },
+      { "word": "entnommen", "correct": false, "explanation": "An attributive participle before Proben needs an adjective ending." },
+      { "word": "entnommener", "correct": false, "explanation": "The ending -er does not fit nominative plural after die." }
+    ]
+  },
+  {
+    "id": 154,
+    "sentence": "Er hat die Konsequenzen offenbar ___ Kauf genommen.",
+    "translation": "He apparently accepted the consequences.",
+    "options": [
+      { "word": "in", "correct": true, "explanation": "Etwas in Kauf nehmen is the fixed expression for accepting an unwelcome consequence." },
+      { "word": "auf", "correct": false, "explanation": "Auf Kauf nehmen is not the expression." },
+      { "word": "zu", "correct": false, "explanation": "Zu Kauf nehmen is not the expression." },
+      { "word": "an", "correct": false, "explanation": "An Kauf nehmen is not the expression." }
+    ]
+  },
+  {
+    "id": 155,
+    "sentence": "Er nahm die Kritik ___ Anlass, sein Vorgehen zu ändern.",
+    "translation": "He took the criticism as a reason to change his approach.",
+    "options": [
+      { "word": "zum", "correct": true, "explanation": "Etwas zum Anlass nehmen is the fixed phrase for using something as a reason to act." },
+      { "word": "am", "correct": false, "explanation": "Am Anlass does not complete the expression zum Anlass nehmen." },
+      { "word": "im", "correct": false, "explanation": "Im Anlass does not complete the expression zum Anlass nehmen." },
+      { "word": "beim", "correct": false, "explanation": "Beim Anlass does not complete the expression zum Anlass nehmen." }
+    ]
+  },
+  {
+    "id": 156,
+    "sentence": "Sie sah davon ___, den Vertrag sofort zu unterschreiben.",
+    "translation": "She refrained from signing the contract immediately.",
+    "options": [
+      { "word": "ab", "correct": true, "explanation": "Von etwas absehen means to refrain from it; the separable particle is ab." },
+      { "word": "an", "correct": false, "explanation": "Davon ansehen is not the expression for refraining from an action." },
+      { "word": "aus", "correct": false, "explanation": "Davon aussehen does not mean to refrain from an action." },
+      { "word": "zu", "correct": false, "explanation": "Davon zusehen does not mean to refrain from an action." }
+    ]
+  },
+  {
+    "id": 157,
+    "sentence": "Seine Behauptung entbehrt ___ Grundlage.",
+    "translation": "His claim lacks any foundation.",
+    "options": [
+      { "word": "jeder", "correct": true, "explanation": "Entbehren takes the genitive, and jeder is feminine genitive before Grundlage." },
+      { "word": "jede", "correct": false, "explanation": "Jede is nominative or accusative feminine, not genitive." },
+      { "word": "jedem", "correct": false, "explanation": "Jedem is masculine or neuter dative, not feminine genitive." },
+      { "word": "jeden", "correct": false, "explanation": "Jeden is not the feminine genitive form needed before Grundlage." }
+    ]
+  },
+  {
+    "id": 158,
+    "sentence": "Wie viel ___ diese Fahrkarte?",
+    "translation": "How much does this ticket cost?",
+    "options": [
+      { "word": "kostet", "correct": true, "explanation": "Diese Fahrkarte is singular, so kosten takes the form kostet." },
+      { "word": "kosten", "correct": false, "explanation": "Kosten goes with a plural subject, but Fahrkarte is singular." },
+      { "word": "kostest", "correct": false, "explanation": "Kostest is the form used with du." },
+      { "word": "koste", "correct": false, "explanation": "Koste is the form used with ich." }
+    ]
+  },
+  {
+    "id": 159,
+    "sentence": "Ich hätte gern ein Glas Wasser ___ Eis.",
+    "translation": "I'd like a glass of water without ice.",
+    "options": [
+      { "word": "ohne", "correct": true, "explanation": "Ohne means without: ohne Eis." },
+      { "word": "seit", "correct": false, "explanation": "Seit refers to time and does not mean without." },
+      { "word": "bei", "correct": false, "explanation": "Bei means at or with, not without." },
+      { "word": "nach", "correct": false, "explanation": "Nach does not express the absence of ice." }
+    ]
+  },
+  {
+    "id": 160,
+    "sentence": "___ Sie bitte die Tür!",
+    "translation": "Please close the door!",
+    "options": [
+      { "word": "Schließen", "correct": true, "explanation": "The formal imperative uses the infinitive followed by Sie: Schließen Sie." },
+      { "word": "Schließt", "correct": false, "explanation": "Schließt is a present-tense form or an informal plural command, not a command with Sie." },
+      { "word": "Schließ", "correct": false, "explanation": "Schließ is an informal singular command, used without Sie." },
+      { "word": "Schließe", "correct": false, "explanation": "Schließe is a form for ich or an informal singular command, not the formal imperative." }
+    ]
+  },
+  {
+    "id": 161,
+    "sentence": "Ich steige an der nächsten Bushaltestelle ___.",
+    "translation": "I get off at the next bus stop.",
+    "options": [
+      { "word": "aus", "correct": true, "explanation": "Aussteigen means to get off a vehicle; its separable particle goes at the end." },
+      { "word": "auf", "correct": false, "explanation": "Aufsteigen means to climb up or rise, not to get off a bus." },
+      { "word": "gegen", "correct": false, "explanation": "Gegen does not form a verb meaning to get off a bus." },
+      { "word": "vor", "correct": false, "explanation": "Vor does not form the verb for getting off a vehicle." }
+    ]
+  },
+  {
+    "id": 162,
+    "sentence": "Ich rufe dich an, ___ ich zu Hause bin.",
+    "translation": "I'll call you as soon as I'm home.",
+    "options": [
+      { "word": "sobald", "correct": true, "explanation": "Sobald means as soon as and introduces a clause with the verb at the end." },
+      { "word": "denn", "correct": false, "explanation": "Denn means because and does not put the finite verb at the end of its clause." },
+      { "word": "trotz", "correct": false, "explanation": "Trotz is a preposition meaning despite, not a conjunction meaning as soon as." },
+      { "word": "wegen", "correct": false, "explanation": "Wegen is a preposition meaning because of, not a conjunction introducing this clause." }
+    ]
+  },
+  {
+    "id": 163,
+    "sentence": "Wir treffen uns ___ dem Kino.",
+    "translation": "We'll meet in front of the cinema.",
+    "options": [
+      { "word": "vor", "correct": true, "explanation": "Vor dem Kino means in front of the cinema; a location takes dative dem." },
+      { "word": "für", "correct": false, "explanation": "Für means for and would require accusative, not dem." },
+      { "word": "durch", "correct": false, "explanation": "Durch means through and would require accusative, not dem." },
+      { "word": "ohne", "correct": false, "explanation": "Ohne means without and would require accusative, not dem." }
+    ]
+  },
+  {
+    "id": 164,
+    "sentence": "Ich brauche ___ Ausweis für die Reise.",
+    "translation": "I need my ID for the trip.",
+    "options": [
+      { "word": "meinen", "correct": true, "explanation": "Ausweis is masculine and the direct object of brauchen, so the possessive is meinen." },
+      { "word": "mein", "correct": false, "explanation": "Mein is masculine nominative; the direct object needs accusative." },
+      { "word": "meine", "correct": false, "explanation": "Meine is feminine or plural, but Ausweis is masculine." },
+      { "word": "meinem", "correct": false, "explanation": "Meinem is dative, not the accusative form required here." }
+    ]
+  },
+  {
+    "id": 165,
+    "sentence": "Das Essen schmeckt ___ sehr gut.",
+    "translation": "The food tastes very good to me.",
+    "options": [
+      { "word": "mir", "correct": true, "explanation": "Schmecken takes a dative person: Das Essen schmeckt mir." },
+      { "word": "mich", "correct": false, "explanation": "Mich is accusative; the person tasting something is dative with schmecken." },
+      { "word": "ich", "correct": false, "explanation": "Ich is nominative, but Das Essen is already the subject." },
+      { "word": "mein", "correct": false, "explanation": "Mein is a possessive word and cannot stand here as the person experiencing the taste." }
+    ]
+  },
+  {
+    "id": 166,
+    "sentence": "Es gibt ___ mehr Milch im Kühlschrank.",
+    "translation": "There is no more milk in the fridge.",
+    "options": [
+      { "word": "keine", "correct": true, "explanation": "Milch is feminine and follows es gibt in the accusative, so use keine." },
+      { "word": "kein", "correct": false, "explanation": "Kein is used with masculine nominative or neuter nouns, not feminine Milch." },
+      { "word": "keinen", "correct": false, "explanation": "Keinen is masculine accusative, but Milch is feminine." },
+      { "word": "keinem", "correct": false, "explanation": "Keinem is dative masculine or neuter, not feminine accusative." }
+    ]
+  },
+  {
+    "id": 167,
+    "sentence": "Ich bin ___ fünf Minuten wieder da.",
+    "translation": "I'll be back in five minutes.",
+    "options": [
+      { "word": "in", "correct": true, "explanation": "In fünf Minuten means five minutes from now." },
+      { "word": "seit", "correct": false, "explanation": "Seit means since or for a duration continuing until now, not time until a return." },
+      { "word": "vor", "correct": false, "explanation": "Vor fünf Minuten means five minutes ago, not in five minutes." },
+      { "word": "aus", "correct": false, "explanation": "Aus does not express the time remaining until something happens." }
+    ]
+  },
+  {
+    "id": 168,
+    "sentence": "Sie bedankt sich ___ die Einladung.",
+    "translation": "She says thank you for the invitation.",
+    "options": [
+      { "word": "für", "correct": true, "explanation": "Sich für etwas bedanken means to express thanks for something; für die Einladung gives the reason." },
+      { "word": "mit", "correct": false, "explanation": "Mit means with and does not name the reason for the thanks." },
+      { "word": "auf", "correct": false, "explanation": "Sich auf etwas bedanken is not the expression." },
+      { "word": "an", "correct": false, "explanation": "Sich an etwas bedanken is not the expression." }
+    ]
+  },
+  {
+    "id": 169,
+    "sentence": "Ich habe mich ___ die Stelle beworben.",
+    "translation": "I applied for the job.",
+    "options": [
+      { "word": "um", "correct": true, "explanation": "Sich um eine Stelle bewerben is the expression for applying for a job." },
+      { "word": "an", "correct": false, "explanation": "An is not used to introduce the job applied for." },
+      { "word": "aus", "correct": false, "explanation": "Aus does not introduce the job applied for and would require dative." },
+      { "word": "mit", "correct": false, "explanation": "Mit does not introduce the job applied for." }
+    ]
+  },
+  {
+    "id": 170,
+    "sentence": "Der Arzt hat mir ___, mehr Wasser zu trinken.",
+    "translation": "The doctor advised me to drink more water.",
+    "options": [
+      { "word": "geraten", "correct": true, "explanation": "The perfect tense of raten uses hat plus the past participle geraten." },
+      { "word": "riet", "correct": false, "explanation": "Riet is simple past; after hat, use the participle geraten." },
+      { "word": "rät", "correct": false, "explanation": "Rät is present tense, not the participle required after hat." },
+      { "word": "raten", "correct": false, "explanation": "Raten is the infinitive, not the past participle." }
+    ]
+  },
+  {
+    "id": 171,
+    "sentence": "Wir sprechen morgen ___ das Problem.",
+    "translation": "We'll talk about the problem tomorrow.",
+    "options": [
+      { "word": "über", "correct": true, "explanation": "Über etwas sprechen means to talk about something; das Problem is accusative." },
+      { "word": "mit", "correct": false, "explanation": "Mit introduces the person you talk with and requires dative, not das Problem." },
+      { "word": "bei", "correct": false, "explanation": "Bei means at or with and requires dative; it does not mean about here." },
+      { "word": "aus", "correct": false, "explanation": "Aus means out of or from and requires dative, not das Problem." }
+    ]
+  },
+  {
+    "id": 172,
+    "sentence": "Ich freue mich ___ deinen Besuch morgen.",
+    "translation": "I'm looking forward to your visit tomorrow.",
+    "options": [
+      { "word": "auf", "correct": true, "explanation": "Sich auf etwas freuen expresses anticipation of a future event." },
+      { "word": "für", "correct": false, "explanation": "Sich für etwas freuen means to be happy for something; it does not express looking forward to a visit." },
+      { "word": "an", "correct": false, "explanation": "Sich an etwas freuen is not the expression for looking forward to an event." },
+      { "word": "mit", "correct": false, "explanation": "Sich mit etwas freuen does not express anticipation of a visit." }
+    ]
+  },
+  {
+    "id": 173,
+    "sentence": "Ich fahre mit ___ Freunden ans Meer.",
+    "translation": "I'm going to the seaside with my friends.",
+    "options": [
+      { "word": "meinen", "correct": true, "explanation": "Mit takes the dative; in the plural, mein becomes meinen and Freund becomes Freunden." },
+      { "word": "meine", "correct": false, "explanation": "Meine is nominative or accusative plural, not dative after mit." },
+      { "word": "meinem", "correct": false, "explanation": "Meinem is singular dative, but Freunden is plural." },
+      { "word": "meiner", "correct": false, "explanation": "Meiner is not the dative plural form needed before Freunden." }
+    ]
+  },
+  {
+    "id": 174,
+    "sentence": "Sie nimmt jeden Tag ihre Medikamente ___.",
+    "translation": "She takes her medication every day.",
+    "options": [
+      { "word": "ein", "correct": true, "explanation": "Medikamente einnehmen means to take medication; ein goes to the end of this main clause." },
+      { "word": "auf", "correct": false, "explanation": "Medikamente aufnehmen means to absorb or record them, not to take them as prescribed." },
+      { "word": "ab", "correct": false, "explanation": "Abnehmen does not mean to take medication in this sentence." },
+      { "word": "aus", "correct": false, "explanation": "Ausnehmen does not mean to take medication in this sentence." }
+    ]
+  },
+  {
+    "id": 175,
+    "sentence": "Wenn du Fragen hast, ___ mich einfach.",
+    "translation": "If you have questions, just ask me.",
+    "options": [
+      { "word": "frag", "correct": true, "explanation": "Frag is the informal singular command for du." },
+      { "word": "fragst", "correct": false, "explanation": "Fragst is a present-tense form, not the command used here." },
+      { "word": "fragt", "correct": false, "explanation": "Fragt is for er, sie, es or an informal plural command, not du." },
+      { "word": "fragen", "correct": false, "explanation": "Fragen is the infinitive or a formal command used with Sie." }
+    ]
+  },
+  {
+    "id": 176,
+    "sentence": "Gib mir bitte ___ Stift.",
+    "translation": "Please give me the pen.",
+    "options": [
+      { "word": "den", "correct": true, "explanation": "Stift is masculine and the thing being given, so it takes accusative den." },
+      { "word": "der", "correct": false, "explanation": "Der is masculine nominative, but the pen is the direct object." },
+      { "word": "dem", "correct": false, "explanation": "Dem is dative; the person receiving the pen is already expressed by mir." },
+      { "word": "das", "correct": false, "explanation": "Das is neuter, but Stift is masculine." }
+    ]
+  },
+  {
+    "id": 177,
+    "sentence": "Ich suche ___ meinem Handy.",
+    "translation": "I'm looking for my phone.",
+    "options": [
+      { "word": "nach", "correct": true, "explanation": "Nach etwas suchen means to look for something; nach takes dative meinem Handy." },
+      { "word": "für", "correct": false, "explanation": "Für means for but takes accusative, not meinem Handy." },
+      { "word": "durch", "correct": false, "explanation": "Durch means through and takes accusative, not meinem Handy." },
+      { "word": "gegen", "correct": false, "explanation": "Gegen means against and takes accusative, not meinem Handy." }
+    ]
+  },
+  {
+    "id": 178,
+    "sentence": "Ich kann ___ nicht an seine Adresse erinnern.",
+    "translation": "I can't remember his address.",
+    "options": [
+      { "word": "mich", "correct": true, "explanation": "Sich an etwas erinnern is reflexive; with ich, the reflexive pronoun is mich." },
+      { "word": "mir", "correct": false, "explanation": "Mir is dative; sich erinnern takes an accusative reflexive pronoun here." },
+      { "word": "ich", "correct": false, "explanation": "Ich is the subject pronoun, not the reflexive pronoun." },
+      { "word": "mein", "correct": false, "explanation": "Mein is a possessive word and cannot replace the reflexive pronoun." }
+    ]
+  },
+  {
+    "id": 179,
+    "sentence": "Ich brauche eine ___ Tasche.",
+    "translation": "I need a new bag.",
+    "options": [
+      { "word": "neue", "correct": true, "explanation": "After feminine accusative eine, the adjective neu takes the ending -e." },
+      { "word": "neuer", "correct": false, "explanation": "The ending -er does not fit a feminine accusative noun after eine." },
+      { "word": "neues", "correct": false, "explanation": "The ending -es does not fit feminine Tasche after eine." },
+      { "word": "neuen", "correct": false, "explanation": "The ending -en is not used for this feminine accusative adjective after eine." }
+    ]
+  },
+  {
+    "id": 180,
+    "sentence": "Wir wohnen im ___ Stock.",
+    "translation": "We live on the third floor.",
+    "options": [
+      { "word": "dritten", "correct": true, "explanation": "Im is in dem, so the ordinal adjective before masculine dative Stock takes -en." },
+      { "word": "dritte", "correct": false, "explanation": "Dritte lacks the -n needed after the definite article in masculine dative." },
+      { "word": "dritter", "correct": false, "explanation": "Dritter does not fit after im before masculine dative Stock." },
+      { "word": "drittes", "correct": false, "explanation": "Drittes is a neuter ending, but Stock is masculine." }
+    ]
+  },
+  {
+    "id": 181,
+    "sentence": "Ich nehme lieber Tee ___ Kaffee.",
+    "translation": "I'd rather have tea than coffee.",
+    "options": [
+      { "word": "als", "correct": true, "explanation": "Use als after a comparative such as lieber: lieber Tee als Kaffee." },
+      { "word": "wie", "correct": false, "explanation": "Wie is used for equal comparisons; lieber calls for als." },
+      { "word": "dass", "correct": false, "explanation": "Dass introduces a clause and does not compare two choices here." },
+      { "word": "ob", "correct": false, "explanation": "Ob introduces an indirect yes-or-no question, not a comparison." }
+    ]
+  },
+  {
+    "id": 182,
+    "sentence": "Haben Sie einen Tisch für zwei Personen ___?",
+    "translation": "Do you have a table available for two?",
+    "options": [
+      { "word": "frei", "correct": true, "explanation": "Haben Sie einen Tisch frei? asks whether a table is available. Frei describes the table after the noun, so it has no ending." },
+      { "word": "freie", "correct": false, "explanation": "Freie is an inflected adjective used before a noun, not after Tisch here." },
+      { "word": "freien", "correct": false, "explanation": "Freien is an attributive adjective form; this position needs uninflected frei." },
+      { "word": "freies", "correct": false, "explanation": "Freies is an inflected adjective form and does not follow Tisch here." }
     ]
   }
 ]

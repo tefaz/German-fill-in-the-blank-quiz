@@ -33,6 +33,22 @@ body {
   height: 100%;
 }
 
+.score {
+  position: fixed;
+  z-index: 2;
+  top: max(1rem, env(safe-area-inset-top));
+  left: max(1rem, env(safe-area-inset-left));
+  margin: 0;
+  padding: .45rem .7rem;
+  border: 1px solid rgb(255 193 107 / 25%);
+  border-radius: .6rem;
+  color: #ffe9c9;
+  background: rgb(30 20 14 / 72%);
+  font-size: .85rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
 .game-card {
   width: 100%;
   height: 100%;
