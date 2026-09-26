@@ -4,6 +4,10 @@ A small, static German fill-in-the-blank game for English speakers. Questions ar
 
 The game is built with plain HTML, CSS, and JavaScript. It has no dependencies, package manager, or build step.
 
+![German in the Glow quiz showing a completed fill-in-the-blank question](Screenshot_1.png)
+
+*A sample question from the quiz: choose the missing German word and get an immediate explanation.*
+
 ## Play locally
 
 Because the game loads its question bank with `fetch()`, serve the project from a local web server rather than opening `index.html` directly:
@@ -14,7 +18,7 @@ python3 -m http.server
 
 Then open [http://localhost:8000](http://localhost:8000).
 
-Choose an answer with the mouse or by pressing `1`–`5`. Each answer reveals a translation and explanation and sends a brief wave through the glimmers. Press `Enter` or `Space`, or click empty space, to continue without triggering another wave. Incorrect questions return to the queue and appear again later.
+Choose an answer with the mouse or by pressing `1`–`4`. Each answer reveals a translation and explanation and sends a brief wave through the glimmers. Press `Enter` or `Space`, or click empty space, to continue without triggering another wave. Incorrect questions return to the queue and appear again later.
 
 The top-left counter shows correct answers in the current page session over the number of playable questions. It resets on reload; because questions repeat, the number of correct answers can eventually exceed the question count.
 
@@ -38,7 +42,8 @@ Add objects to `sentences.json` using this shape:
   "options": [
     { "word": "eine", "correct": true, "explanation": "Katze is feminine." },
     { "word": "einen", "correct": false, "explanation": "This is masculine accusative." },
-    { "word": "ein", "correct": false, "explanation": "This does not fit feminine accusative." }
+    { "word": "ein", "correct": false, "explanation": "This does not fit feminine accusative." },
+    { "word": "einem", "correct": false, "explanation": "This is dative, not accusative." }
   ]
 }
 ```
