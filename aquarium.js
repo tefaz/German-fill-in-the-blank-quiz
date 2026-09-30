@@ -6,6 +6,8 @@ const PULSE_MS = 700;
 const DIM_MS = 250;
 const glimmers = [];
 const sprites = [];
+const bokeh = [];
+const highlights = [];
 const routes = [
   { start: .06, end: .29, bend: 1.3, phase: .1, amplitude: .065, speed: .018, reverse: false },
   { start: .32, end: .08, bend: 1.6, phase: 1.9, amplitude: .07, speed: .022, reverse: true },
@@ -19,8 +21,7 @@ let width = 0;
 let height = 0;
 let dpr = 1;
 let background;
-let currentLayer;
-let currentContext;
+let sparkleSprite;
 let frame;
 let lastTime = performance.now();
 let reactionStart = -Infinity;
@@ -31,18 +32,48 @@ function random(min, max) { return min + Math.random() * (max - min); }
 
 function makeSprites() {
   for (let i = 0; i < 19; i++) {
-    const hue = 20 + i * 2;
+    const hue = 38 + i * .9;
     const sprite = document.createElement('canvas');
     sprite.width = sprite.height = 64;
     const spriteContext = sprite.getContext('2d');
     const glow = spriteContext.createRadialGradient(32, 32, 0, 32, 32, 32);
     glow.addColorStop(0, `hsla(${hue}, 100%, 85%, 1)`);
-    glow.addColorStop(0.09, `hsla(${hue}, 100%, 62%, .95)`);
-    glow.addColorStop(0.27, `hsla(${hue}, 100%, 50%, .4)`);
+    glow.addColorStop(0.16, `hsla(${hue}, 85%, 76%, 1)`);
+    glow.addColorStop(0.35, `hsla(${hue}, 78%, 62%, .45)`);
     glow.addColorStop(1, `hsla(${hue}, 100%, 45%, 0)`);
     spriteContext.fillStyle = glow;
     spriteContext.fillRect(0, 0, 64, 64);
     sprites.push(sprite);
+  }
+
+  // A crisp white core and tapered rays stay distinct from the soft bokeh.
+  sparkleSprite = document.createElement('canvas');
+  sparkleSprite.width = sparkleSprite.height = 256;
+  const star = sparkleSprite.getContext('2d');
+  star.translate(128, 128);
+  const halo = star.createRadialGradient(0, 0, 0, 0, 0, 128);
+  halo.addColorStop(0, '#fffef0');
+  halo.addColorStop(.025, 'rgba(255, 251, 218, 1)');
+  halo.addColorStop(.09, 'rgba(255, 233, 144, .65)');
+  halo.addColorStop(.3, 'rgba(223, 179, 62, .18)');
+  halo.addColorStop(1, 'rgba(223, 179, 62, 0)');
+  star.fillStyle = halo;
+  star.fillRect(-128, -128, 256, 256);
+  for (let ray = 0; ray < 8; ray++) {
+    star.save();
+    star.rotate(ray * Math.PI / 4);
+    const length = ray % 2 ? 65 : 128;
+    const beam = star.createLinearGradient(0, 0, length, 0);
+    beam.addColorStop(0, ray % 2 ? 'rgba(255, 246, 187, .45)' : '#fff8cf');
+    beam.addColorStop(.3, 'rgba(248, 215, 116, .5)');
+    beam.addColorStop(1, 'rgba(248, 215, 116, 0)');
+    star.fillStyle = beam;
+    star.beginPath();
+    star.moveTo(0, -2.4);
+    star.lineTo(length, 0);
+    star.lineTo(0, 2.4);
+    star.fill();
+    star.restore();
   }
 }
 
@@ -51,18 +82,19 @@ function makeBackground() {
   background.width = Math.ceil(width);
   background.height = Math.ceil(height);
   const bg = background.getContext('2d');
-  bg.fillStyle = '#0e0c0b';
+  bg.fillStyle = '#000000';
   bg.fillRect(0, 0, width, height);
 
   const pools = [
-    [0.14, 0.19, 0.64, 'rgba(113, 72, 22, .16)'],
-    [0.88, 0.76, 0.72, 'rgba(91, 58, 15, .15)'],
-    [0.57, 0.48, 0.7, 'rgba(72, 59, 16, .1)']
+    [0.85, 0.02, 0.46, 'rgba(151, 104, 28, .3)'],
+    [0.92, 0.82, 0.32, 'rgba(115, 91, 23, .18)'],
+    [0.15, 0.2, 0.25, 'rgba(133, 95, 25, .18)']
   ];
   for (const [x, y, reach, color] of pools) {
-    const radius = Math.max(width, height) * reach;
+    const radius = Math.min(width, height) * reach;
     const gradient = bg.createRadialGradient(width * x, height * y, 0, width * x, height * y, radius);
     gradient.addColorStop(0, color);
+    gradient.addColorStop(.75, 'rgba(0, 0, 0, 0)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
     bg.fillStyle = gradient;
     bg.fillRect(0, 0, width, height);
@@ -71,7 +103,32 @@ function makeBackground() {
 
 function seedGlimmers() {
   glimmers.length = 0;
-  const flowCount = Math.min(280, Math.max(140, Math.round(width * height / 4700)));
+  bokeh.length = 0;
+  highlights.length = 0;
+  const sceneScale = Math.min(width, height) / 900;
+  const bokehCount = Math.min(90, Math.max(32, Math.round(width * height / 17000)));
+  for (let i = 0; i < bokehCount; i++) {
+    // Most discs flank the text; a lighter scattering fills the upper scene.
+    const x = i % 4 === 0 ? random(.2, .8) : i % 2 ? random(.72, 1) : random(0, .28);
+    const y = i % 4 === 0 ? random(0, .34) : random(0, 1);
+    bokeh.push({
+      x: width * x, y: height * y,
+      radius: random(12, 55) * Math.min(1.2, Math.max(.65, sceneScale)),
+      alpha: random(.25, .6),
+      phase: random(0, TAU), speed: random(.04, .12)
+    });
+  }
+  for (const [x, y, radius] of [
+    [.84, .015, 175], [.12, .25, 60], [.94, .22, 48], [.06, .87, 65],
+    [.68, .15, 34], [.88, .68, 42], [.27, .74, 28]
+  ]) {
+    highlights.push({
+      x: width * x, y: height * y,
+      radius: radius * Math.min(1.15, Math.max(.65, sceneScale)),
+      phase: random(0, TAU), rotation: random(-.25, .25)
+    });
+  }
+  const flowCount = Math.min(180, Math.max(70, Math.round(width * height / 8000)));
   for (let i = 0; i < flowCount; i++) {
     glimmers.push({
       route: i % routes.length,
@@ -79,7 +136,7 @@ function seedGlimmers() {
       speed: random(.65, 1.4),
       offset: random(-55, 55),
       size: random(2.5, 9),
-      alpha: random(.3, .75),
+      alpha: random(.5, .9),
       colorPhase: random(0, TAU),
       colorSpeed: random(0.25, 0.6),
       shimmerPhase: random(0, TAU),
@@ -90,9 +147,9 @@ function seedGlimmers() {
     });
   }
 
-  // One independent glimmer per cell keeps the space between currents alive.
-  const columns = Math.max(1, Math.ceil(width / 72));
-  const rows = Math.max(1, Math.ceil(height / 72));
+  // Sparse scattered lights leave generous black space between the currents.
+  const columns = Math.max(1, Math.ceil(width / 120));
+  const rows = Math.max(1, Math.ceil(height / 120));
   for (let row = 0; row < rows; row++) {
     for (let column = 0; column < columns; column++) {
       glimmers.push({
@@ -101,7 +158,7 @@ function seedGlimmers() {
         drift: random(8, 25),
         speed: random(.15, .35),
         size: random(2.8, 7.3),
-        alpha: random(.32, .55),
+        alpha: random(.45, .75),
         colorPhase: random(0, TAU),
         colorSpeed: random(.25, .6),
         shimmerPhase: random(0, TAU),
@@ -137,34 +194,32 @@ function routePoint(routeIndex, progress, offset = 0, time = 0) {
   return { x: x - dy / length * offset, y: y + dx / length * offset };
 }
 
-function drawCurrent(time) {
-  currentContext.clearRect(0, 0, width, height);
-  currentContext.filter = 'blur(13px)';
-  currentContext.lineCap = 'round';
-  currentContext.lineJoin = 'round';
-  for (let i = 0; i < routes.length; i++) {
-    currentContext.beginPath();
-    for (let step = 0; step <= 60; step++) {
-      const point = routePoint(i, step / 60, 0, time);
-      if (step === 0) currentContext.moveTo(point.x, point.y);
-      else currentContext.lineTo(point.x, point.y);
-    }
-    currentContext.strokeStyle = i % 2 ? 'rgba(255, 185, 37, .17)' : 'rgba(255, 108, 24, .17)';
-    currentContext.lineWidth = Math.min(90, Math.max(50, height * .095));
-    currentContext.stroke();
-  }
-  currentContext.filter = 'none';
-  context.drawImage(currentLayer, 0, 0, width, height);
+function drawSparkle(x, y, radius, alpha, rotation = 0) {
+  context.save();
+  context.globalAlpha = alpha;
+  context.translate(x, y);
+  context.rotate(rotation);
+  context.drawImage(sparkleSprite, -radius, -radius, radius * 2, radius * 2);
+  context.restore();
+}
 
-  for (let i = 0; i < routes.length; i++) {
-    const point = routePoint(i, (time * routes[i].speed + i * .23) % 1, 0, time);
-    const radius = Math.min(width * .2, 190);
-    const light = context.createRadialGradient(point.x, point.y, 0, point.x, point.y, radius);
-    const color = i % 2 ? '255, 197, 46' : '255, 116, 26';
-    light.addColorStop(0, `rgba(${color}, .09)`);
-    light.addColorStop(1, `rgba(${color}, 0)`);
-    context.fillStyle = light;
-    context.fillRect(point.x - radius, point.y - radius, radius * 2, radius * 2);
+// Soft gold discs sit behind sharper, slowly glittering stars.
+function drawAtmosphere(time) {
+  for (const light of bokeh) {
+    const x = light.x + Math.sin(time * light.speed + light.phase) * 12;
+    const y = light.y + Math.cos(time * light.speed + light.phase) * 9;
+    const radius = light.radius;
+    const glow = context.createRadialGradient(x, y, 0, x, y, radius);
+    const shimmer = .9 + Math.sin(time * .3 + light.phase) * .1;
+    glow.addColorStop(0, `rgba(242, 217, 127, ${light.alpha * shimmer})`);
+    glow.addColorStop(.65, `rgba(222, 186, 77, ${light.alpha * shimmer * .9})`);
+    glow.addColorStop(1, 'rgba(173, 132, 39, 0)');
+    context.fillStyle = glow;
+    context.fillRect(x - radius, y - radius, radius * 2, radius * 2);
+  }
+  for (const light of highlights) {
+    const shimmer = .8 + Math.sin(time * .65 + light.phase) * .2;
+    drawSparkle(light.x, light.y, light.radius, shimmer, light.rotation);
   }
 }
 
@@ -176,7 +231,7 @@ function draw(now) {
   const dim = motionPreference.matches ? 0 : Math.max(0, 1 - (now - dimStart) / DIM_MS) * .17;
 
   context.drawImage(background, 0, 0);
-  drawCurrent(time);
+  drawAtmosphere(time);
 
   for (const glimmer of glimmers) {
     const point = glimmer.route === undefined
@@ -208,6 +263,10 @@ function draw(now) {
     if (x < -size || x > width + size || y < -size || y > height + size) continue;
     context.globalAlpha = alpha;
     context.drawImage(sprites[spriteIndex], x - size / 2, y - size / 2, size, size);
+    context.globalAlpha = 1;
+    if (flash > .35 && glimmer.size > 6) {
+      drawSparkle(x, y, size * 1.3, (flash - .35) * .85, glimmer.colorPhase);
+    }
   }
   context.globalAlpha = 1;
 }
@@ -220,12 +279,6 @@ function resize() {
   canvas.height = Math.round(height * dpr);
   context.setTransform(dpr, 0, 0, dpr, 0, 0);
   makeBackground();
-  currentLayer = document.createElement('canvas');
-  const layerScale = Math.min(.5, 700 / width, 450 / height);
-  currentLayer.width = Math.ceil(width * layerScale);
-  currentLayer.height = Math.ceil(height * layerScale);
-  currentContext = currentLayer.getContext('2d');
-  currentContext.setTransform(layerScale, 0, 0, layerScale, 0, 0);
   seedGlimmers();
   draw(performance.now());
 }

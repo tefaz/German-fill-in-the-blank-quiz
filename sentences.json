@@ -2000,5 +2000,203 @@
       { "word": "freien", "correct": false, "explanation": "Freien is an attributive adjective form; this position needs uninflected frei." },
       { "word": "freies", "correct": false, "explanation": "Freies is an inflected adjective form and does not follow Tisch here." }
     ]
+  },
+  {
+    "id": 183,
+    "sentence": "Mir ___ kalt.",
+    "translation": "I'm cold.",
+    "options": [
+      {"word": "ist", "correct": true, "explanation": "German uses mir ist kalt for feeling cold. Mir names the person experiencing the feeling in the dative; the verb is ist, not bin."},
+      {"word": "bin", "correct": false, "explanation": "Bin goes with the subject ich. Here mir is dative, and the expression is mir ist kalt."},
+      {"word": "habe", "correct": false, "explanation": "German does not use haben to express feeling cold. Use mir ist kalt."},
+      {"word": "sind", "correct": false, "explanation": "This expression uses singular ist. Mir does not act as a plural subject."}
+    ]
+  },
+  {
+    "id": 184,
+    "sentence": "Wie ___ dauert die Fahrt zum Flughafen?",
+    "translation": "How long does the journey to the airport take?",
+    "options": [
+      {"word": "lange", "correct": true, "explanation": "Wie lange asks about duration. Dauern means to take time or last; die Fahrt is the journey."},
+      {"word": "langen", "correct": false, "explanation": "Langen is an inflected adjective form. This question needs the adverb lange, without an adjective ending."},
+      {"word": "langem", "correct": false, "explanation": "Langem is a dative adjective form, not the adverb used to ask about duration."},
+      {"word": "langes", "correct": false, "explanation": "Langes is an adjective form used with a neuter noun. There is no noun after the blank here."}
+    ]
+  },
+  {
+    "id": 185,
+    "sentence": "Der Supermarkt bleibt heute ___ 22 Uhr geöffnet.",
+    "translation": "The supermarket stays open until 10 p.m. today.",
+    "options": [
+      {"word": "bis", "correct": true, "explanation": "Bis gives the endpoint of a period: bis 22 Uhr means until 10 p.m. Bleibt geöffnet means stays open."},
+      {"word": "seit", "correct": false, "explanation": "Seit marks when an ongoing situation began. It does not give the closing time in this sentence."},
+      {"word": "während", "correct": false, "explanation": "Während means during and normally introduces a period or a clause, not an endpoint such as 22 Uhr."},
+      {"word": "zwischen", "correct": false, "explanation": "Zwischen means between and needs two time boundaries here, such as zwischen 20 und 22 Uhr."}
+    ]
+  },
+  {
+    "id": 186,
+    "sentence": "Ich hätte gern ein Zimmer mit ___ Bad.",
+    "translation": "I'd like a room with its own bathroom.",
+    "options": [
+      {"word": "eigenem", "correct": true, "explanation": "Mit takes dative. Bad is neuter, and without an article the adjective carries the dative ending -em: mit eigenem Bad."},
+      {"word": "eigener", "correct": false, "explanation": "Eigener does not match the neuter dative noun Bad. Use eigenem."},
+      {"word": "eigenes", "correct": false, "explanation": "Eigenes is neuter nominative or accusative without an article. Mit requires dative."},
+      {"word": "eigenen", "correct": false, "explanation": "The ending -en would fit after a dative article, as in mit einem eigenen Bad. Without an article, use eigenem."}
+    ]
+  },
+  {
+    "id": 187,
+    "sentence": "Diese Schuhe sind mir ___ klein.",
+    "translation": "These shoes are too small for me.",
+    "options": [
+      {"word": "zu", "correct": true, "explanation": "Zu before an adjective means too: zu klein. Mir indicates the person for whom the shoes are too small."},
+      {"word": "genug", "correct": false, "explanation": "Genug means enough and follows the adjective: klein genug. It cannot express too small here."},
+      {"word": "viele", "correct": false, "explanation": "Viele describes a number of countable things. It cannot modify the adjective klein."},
+      {"word": "mehr", "correct": false, "explanation": "Mehr means more. The comparative of klein is kleiner, and too small is zu klein."}
+    ]
+  },
+  {
+    "id": 188,
+    "sentence": "Welche ___ können Sie mir empfehlen?",
+    "translation": "Which dishes can you recommend to me?",
+    "options": [
+      {"word": "Gerichte", "correct": true, "explanation": "Welche calls for plural Gerichte here. Das Gericht means the dish; empfehlen means to recommend."},
+      {"word": "Gericht", "correct": false, "explanation": "Gericht is singular neuter, which would require welches rather than welche."},
+      {"word": "Gerichten", "correct": false, "explanation": "Gerichten is dative plural. The dishes being recommended are the accusative object, so use Gerichte."},
+      {"word": "Gerichts", "correct": false, "explanation": "Gerichts is genitive singular, not the plural accusative form needed after welche."}
+    ]
+  },
+  {
+    "id": 189,
+    "sentence": "Ich nehme den früheren Zug, ___ ich pünktlich ankomme.",
+    "translation": "I'll take the earlier train so that I arrive on time.",
+    "options": [
+      {"word": "damit", "correct": true, "explanation": "Damit introduces a purpose clause with a subject and a finite verb at the end: damit ich pünktlich ankomme."},
+      {"word": "um", "correct": false, "explanation": "Um expresses purpose with zu and an infinitive: um pünktlich anzukommen. It cannot introduce ich pünktlich ankomme."},
+      {"word": "deshalb", "correct": false, "explanation": "Deshalb means therefore and requires main-clause word order: deshalb komme ich pünktlich an."},
+      {"word": "für", "correct": false, "explanation": "Für is a preposition meaning for. It cannot introduce this clause with ich and ankomme."}
+    ]
+  },
+  {
+    "id": 190,
+    "sentence": "Könnten Sie bitte etwas ___ sprechen?",
+    "translation": "Could you please speak a little more slowly?",
+    "options": [
+      {"word": "langsamer", "correct": true, "explanation": "Langsamer is the comparative of langsam. It modifies sprechen as an adverb, so it takes no adjective ending."},
+      {"word": "langsamere", "correct": false, "explanation": "Langsamere is an inflected adjective form used before a noun, not an adverb modifying sprechen."},
+      {"word": "langsameren", "correct": false, "explanation": "Langsameren has an adjective ending. Here the comparative adverb is langsamer."},
+      {"word": "langsameres", "correct": false, "explanation": "Langsameres is an inflected adjective form. There is no noun after it here, so use langsamer."}
+    ]
+  },
+  {
+    "id": 191,
+    "sentence": "___ bitte nicht deinen Regenschirm!",
+    "translation": "Please don't forget your umbrella!",
+    "options": [
+      {"word": "Vergiss", "correct": true, "explanation": "The informal singular command of vergessen is vergiss. Its vowel changes from e to i; der Regenschirm means umbrella."},
+      {"word": "Vergesse", "correct": false, "explanation": "Vergesse is the ich form. The informal singular command uses the changed vowel: vergiss."},
+      {"word": "Vergisst", "correct": false, "explanation": "Vergisst is the present-tense form for du or er/sie/es, not the command."},
+      {"word": "Vergessen", "correct": false, "explanation": "Vergessen is the infinitive. A formal command would be Vergessen Sie; this sentence uses the informal singular command."}
+    ]
+  },
+  {
+    "id": 192,
+    "sentence": "Wir können ___ drinnen oder draußen sitzen.",
+    "translation": "We can sit either inside or outside.",
+    "options": [
+      {"word": "entweder", "correct": true, "explanation": "Entweder pairs with oder to present alternatives: entweder drinnen oder draußen."},
+      {"word": "weder", "correct": false, "explanation": "Weder pairs with noch, not oder, and means neither rather than either."},
+      {"word": "sowohl", "correct": false, "explanation": "Sowohl pairs with als auch to mean both ... and. It does not pair with oder."},
+      {"word": "sondern", "correct": false, "explanation": "Sondern introduces a correction after a negation, such as nicht drinnen, sondern draußen. It does not introduce these alternatives."}
+    ]
+  },
+  {
+    "id": 193,
+    "sentence": "Das ist die Bäckerei, ___ Brot ich so gern esse.",
+    "translation": "That is the bakery whose bread I like so much.",
+    "options": [
+      {"word": "deren", "correct": true, "explanation": "Deren expresses possession and refers back to feminine die Bäckerei: deren Brot means whose bread. The form follows the owner, not the gender of Brot."},
+      {"word": "dessen", "correct": false, "explanation": "Dessen refers back to a masculine or neuter owner. Bäckerei is feminine, so use deren."},
+      {"word": "der", "correct": false, "explanation": "Der does not express whose before Brot in this relative clause. The possessive relative pronoun is deren."},
+      {"word": "dem", "correct": false, "explanation": "Dem is dative masculine or neuter. It does not express possession referring back to die Bäckerei."}
+    ]
+  },
+  {
+    "id": 194,
+    "sentence": "Können wir bitte ___ zahlen?",
+    "translation": "Can we pay separately, please?",
+    "options": [
+      {"word": "getrennt", "correct": true, "explanation": "Getrennt zahlen means to pay separately, for example when each diner pays their own share. Getrennt is an adverb here and has no adjective ending."},
+      {"word": "getrennte", "correct": false, "explanation": "Getrennte is an inflected adjective used before a noun. Here getrennt modifies zahlen."},
+      {"word": "getrennten", "correct": false, "explanation": "Getrennten has an adjective ending, but an adverb modifying zahlen takes no such ending."},
+      {"word": "getrenntes", "correct": false, "explanation": "Getrenntes is an inflected adjective form. The phrase is getrennt zahlen."}
+    ]
+  },
+  {
+    "id": 195,
+    "sentence": "Ich habe ___ beim Kochen in den Finger geschnitten.",
+    "translation": "I cut my finger while cooking.",
+    "options": [
+      {"word": "mir", "correct": true, "explanation": "For an injury to your own body part, German uses a dative reflexive pronoun here: ich habe mir in den Finger geschnitten. Beim Kochen means while cooking."},
+      {"word": "mich", "correct": false, "explanation": "Mich is accusative. With in den Finger specifying the affected body part, this expression uses dative mir."},
+      {"word": "ich", "correct": false, "explanation": "Ich is a subject pronoun, and the sentence already has its subject. The reflexive pronoun needed here is mir."},
+      {"word": "mein", "correct": false, "explanation": "Mein is a possessive word. This expression needs the dative reflexive pronoun mir instead."}
+    ]
+  },
+  {
+    "id": 196,
+    "sentence": "Ich bringe dir morgen dein Buch ___.",
+    "translation": "I'll return your book to you tomorrow.",
+    "options": [
+      {"word": "zurück", "correct": true, "explanation": "Zurückbringen means to return something. In a present-tense main clause, the separable prefix goes at the end: ich bringe ... zurück."},
+      {"word": "zurückgebracht", "correct": false, "explanation": "Zurückgebracht is the past participle. A perfect-tense sentence would use ich habe ... zurückgebracht, not ich bringe."},
+      {"word": "zurückbringen", "correct": false, "explanation": "Zurückbringen is the infinitive. Bringe is already the conjugated verb, so only the separable prefix zurück belongs at the end."},
+      {"word": "zurückbringt", "correct": false, "explanation": "Zurückbringt is a conjugated form used with er/sie/es in a subordinate clause. Here bringe already supplies the conjugated verb."}
+    ]
+  },
+  {
+    "id": 197,
+    "sentence": "Hast du den Herd ___?",
+    "translation": "Have you turned off the stove?",
+    "options": [
+      {"word": "ausgeschaltet", "correct": true, "explanation": "The perfect tense needs the participle ausgeschaltet. With separable ausschalten, ge goes between aus and schaltet; der Herd is the stove."},
+      {"word": "ausschalten", "correct": false, "explanation": "Ausschalten is the infinitive. After hast, this perfect-tense question needs ausgeschaltet."},
+      {"word": "ausschaltest", "correct": false, "explanation": "Ausschaltest is a present-tense form for du in a subordinate clause, not the past participle."},
+      {"word": "schaltete aus", "correct": false, "explanation": "Schaltete ... aus is simple past. It cannot follow hast to form the perfect tense."}
+    ]
+  },
+  {
+    "id": 198,
+    "sentence": "Stell die Milch bitte in ___ Kühlschrank.",
+    "translation": "Please put the milk in the fridge.",
+    "options": [
+      {"word": "den", "correct": true, "explanation": "In takes accusative when it expresses a destination. The milk is being placed into masculine der Kühlschrank, so use den."},
+      {"word": "der", "correct": false, "explanation": "Der is masculine nominative. The destination after in requires accusative den."},
+      {"word": "dem", "correct": false, "explanation": "Dem would describe a location, as in die Milch steht im Kühlschrank. Stell ... in describes placement into the fridge, so use accusative den."},
+      {"word": "des", "correct": false, "explanation": "Des is masculine genitive. In takes accusative for a destination, not genitive."}
+    ]
+  },
+  {
+    "id": 199,
+    "sentence": "Wir sind ___ Fuß zum Hotel gegangen.",
+    "translation": "We walked to the hotel.",
+    "options": [
+      {"word": "zu", "correct": true, "explanation": "The fixed expression zu Fuß means on foot. Gehen uses sein in the perfect tense: wir sind ... gegangen."},
+      {"word": "mit", "correct": false, "explanation": "Mit is used for means of transport, such as mit dem Bus. The expression for walking is zu Fuß."},
+      {"word": "auf", "correct": false, "explanation": "Auf Fuß is not the standard expression for travelling on foot. Use zu Fuß."},
+      {"word": "bei", "correct": false, "explanation": "Bei Fuß is used in the command for a dog to walk at heel. It does not mean travelling on foot here."}
+    ]
+  },
+  {
+    "id": 200,
+    "sentence": "Wenn du müde bist, ___ dich kurz hin.",
+    "translation": "If you're tired, lie down for a moment.",
+    "options": [
+      {"word": "leg", "correct": true, "explanation": "Sich hinlegen means to lie down. The informal singular command is leg dich hin; hin separates and goes to the end."},
+      {"word": "lieg", "correct": false, "explanation": "Lieg comes from liegen, which describes already lying somewhere and does not take dich. To tell someone to lie down, use leg dich hin."},
+      {"word": "liegt", "correct": false, "explanation": "Liegt belongs to liegen and is not the informal singular command of sich hinlegen."},
+      {"word": "legen", "correct": false, "explanation": "Legen is the infinitive. The informal singular command needed with dich is leg."}
+    ]
   }
 ]
