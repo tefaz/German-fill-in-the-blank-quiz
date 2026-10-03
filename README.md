@@ -1,4 +1,4 @@
-# German in the Glow
+# German fill in the blank language quiz
 
 A small, static German fill-in-the-blank game for English speakers. Questions are presented against a flowing aquarium of yellow and orange glimmers, with immediate grammar explanations after each answer.
 
